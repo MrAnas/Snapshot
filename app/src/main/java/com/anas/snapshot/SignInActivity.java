@@ -1,16 +1,53 @@
 package com.anas.snapshot;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.parse.ParseUser;
+
+import org.w3c.dom.Text;
 
 public class SignInActivity extends AppCompatActivity {
+
+    protected TextView signUp;
+    protected TextView mUsername;
+    protected TextView mPasswored;
+    protected Button mSignin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+
+        signUp = (TextView) findViewById(R.id.signupTextView);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+        mUsername = (TextView) findViewById(R.id.usernameField);
+        mPasswored = (TextView)findViewById(R.id.passwordField);
+        mSignin = (Button) findViewById(R.id.signinButton);
+
+        mSignin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ParseUser exist = new ParseUser();
+
+            }
+        });
+
+
+
+
     }
 
     @Override

@@ -35,4 +35,16 @@
         android:id="@+id/signinButton"
         android:layout_below="@+id/passwordField"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/signupTextView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="103dp"
+        android:clickable="true"
+        android:text="Sign Up"
+        android:onClick="onClick" />
 </RelativeLayout>
